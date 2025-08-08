@@ -5,7 +5,6 @@ keymap.set("n", "Q", "<nop>", { silent = true })
 
 -- GENERAL TODO:
 -- check out how to improve code completion (maybe integrate with ai assistant)
--- add a keybind for formatting
 
 
 -- CUSTOM
@@ -19,14 +18,6 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected block down" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected block up" })
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
-
--- TODO: make a resize that makes sense for growing/shrinking instead of direction
-
--- Resize windows with arrow keys
-keymap.set("n", "<C-j>", ":resize -2<CR>", { desc = "Decrease window height" })
-keymap.set("n", "<C-j>", ":resize +2<CR>", { desc = "Increase window height" })
-keymap.set("n", "<C-h>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
-keymap.set("n", "<C-l>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
 -- Buffer navigation
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
@@ -59,6 +50,7 @@ keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code actio
 keymap.set("n", "<leader>gh", vim.diagnostic.open_float, { desc = "Show diagnostics" })
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+keymap.set({ "n", "v" }, "<leader>l", vim.lsp.buf.format, { desc = "Format file/selection" })
 
 -- Neotest — test framework shortcuts
 keymap.set("n", "<leader>tn", function()
