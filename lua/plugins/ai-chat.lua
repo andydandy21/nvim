@@ -1,29 +1,5 @@
 return {
 
-  -- GitHub Copilot (Lua-native)
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-          enabled = true,
-          auto_trigger = true,
-          keymap = {
-            accept = "<Tab>",
-            -- TODO: remove the bottom?
-            next = "<M-]>",
-            prev = "<M-[>",
-            dismiss = "<C-]>",
-          },
-        },
-        panel = { enabled = false }, -- disable side panel to avoid clutter
-      })
-    end,
-  },
-
-  -- CodeCompanion: agent + chat + inline LLM prompts
   {
     "olimorris/codecompanion.nvim",
     dependencies = {
@@ -56,22 +32,6 @@ return {
             name = "copilot",
             model = "gpt-5",
           },
-        },
-      },
-    },
-  },
-
-  -- Fidget: UI feedback during LSP and AI activity
-  {
-    "j-hui/fidget.nvim",
-    opts = {
-      progress = {
-        ignore = {}, -- ensure LSPs and plugins like CodeCompanion show up
-      },
-      notification = {
-        override_vim_notify = true,
-        window = {
-          winblend = 0,
         },
       },
     },
