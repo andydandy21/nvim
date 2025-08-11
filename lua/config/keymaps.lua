@@ -3,8 +3,9 @@ vim.g.mapleader = ' '
 local keymap = vim.keymap
 keymap.set("n", "Q", "<nop>", { silent = true })
 
--- GENERAL TODO:
--- check out how to improve code completion (maybe integrate with ai assistant)
+-- TODO:
+-- figure out how to set up dap with ui
+-- check on how to set up neotest
 
 
 -- CUSTOM
@@ -41,7 +42,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tag
 keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recent files" })
 
 -- LSP-related shortcuts
--- v- different binding instead?
+-- TODO: find a better binding for 'hover document'
 keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover documentation" })
 keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
