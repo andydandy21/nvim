@@ -5,13 +5,13 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      styles = { transparency = true },
-      -- You can include variant, dimness, etc. here
+      styles = { transparency = true }, -- keep or tweak as you like
+      -- variant = "main", -- or "moon" / "dawn" if you prefer
     },
     config = function(_, opts)
       require("rose-pine").setup(opts)
-      vim.cmd([[colorscheme rose-pine]])
+      vim.opt.termguicolors = true
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
 }
-

@@ -1,23 +1,17 @@
 return {
   {
-    "williamboman/mason.nvim",
-    config = true,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     dependencies = {
+      { "mason-org/mason.nvim", lazy = false, opts = {} },
       "neovim/nvim-lspconfig",
     },
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "pyright", "rust_analyzer", "astro" },
-        handlers = {
-          function(server_name)
-            require("lspconfig")[server_name].setup({})
-          end,
-        },
-      })
-    end,
+    opts = {
+      ensure_installed = { "lua_ls", "ts_ls", "pyright", "rust_analyzer", "astro" },
+      handlers = {
+        function(server)
+          require("lspconfig")[server].setup({})
+        end,
+      },
+    },
   },
 }
