@@ -8,8 +8,18 @@ return {
 
       require("nvim-tree").setup({
         view = {
-          number = true,         -- enable absolute line numbers
-          relativenumber = true, -- enable relative line numbers
+          number = true,
+          relativenumber = true,
+          float = {
+            enable = true,
+            open_win_config = {
+              relative = "editor",
+              width = vim.o.columns,
+              height = vim.o.lines,
+              row = 0,
+              col = 0,
+            },
+          }
         },
         renderer = {
           icons = {
