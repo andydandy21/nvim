@@ -50,6 +50,8 @@ return {
           stopOnEntry = false,
         },
       }
+      -- Add keymap for toggling breakpoints
+      vim.keymap.set("n", "<leader>tb", function() dap.toggle_breakpoint() end, { desc = "Toggle breakpoint" })
     end,
   },
 }
