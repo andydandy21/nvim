@@ -8,19 +8,19 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-python",
       "nvim-neotest/neotest-jest",
+      "marilari88/neotest-vitest", -- Add this line
     },
     config = function()
       require("neotest").setup({
         adapters = {
           require("neotest-python")({
-            -- Pass through to nvim-dap / debugpy
             dap = { justMyCode = false },
           }),
           require("neotest-jest")({}),
+          require("neotest-vitest")({}), -- Add this line
         },
       })
 
-      -- Debug the nearest test using Neotest’s DAP strategy
       vim.keymap.set("n", "<leader>td", function()
         require("neotest").run.run({ strategy = "dap" })
       end, { desc = "Neotest debug nearest" })

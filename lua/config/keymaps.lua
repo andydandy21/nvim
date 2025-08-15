@@ -1,11 +1,8 @@
 vim.g.mapleader = ' '
 
 local keymap = vim.keymap
+
 keymap.set("n", "Q", "<nop>", { silent = true })
-
-
--- CUSTOM
-
 
 -- Create a line below on shift enter
 keymap.set("i", "<S-CR>", "<Esc>O", { noremap = true })

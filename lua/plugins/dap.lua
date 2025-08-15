@@ -9,8 +9,8 @@ return {
     config = function()
       require("mason").setup()
       require("mason-nvim-dap").setup({
-        ensure_installed = { "python", "codelldb" }, -- adapter names, not Mason pkg IDs
-      })                                             -- mason-nvim-dap bridges adapter <-> package names. :contentReference[oaicite:1]{index=1}
+        ensure_installed = { "python", "codelldb", "js-debug-adapter" },
+      })
 
       local dap = require("dap")
 
