@@ -15,14 +15,15 @@ return {
       }
 
       local hooks = require("ibl.hooks")
+      local api = vim.api
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RP_Base", { fg = "#191724" })         -- Base
-        vim.api.nvim_set_hl(0, "RP_Overlay", { fg = "#26233a" })      -- Overlay
-        vim.api.nvim_set_hl(0, "RP_HighlightLow", { fg = "#21202e" }) -- Highlight Low
-        vim.api.nvim_set_hl(0, "RP_HighlightMed", { fg = "#403d52" }) -- Highlight Med
-        vim.api.nvim_set_hl(0, "RP_Muted", { fg = "#6e6a86" })        -- Muted
-        vim.api.nvim_set_hl(0, "RP_Subtle", { fg = "#908caa" })       -- Subtle
-        vim.api.nvim_set_hl(0, "RP_Iris", { fg = "#c4a7e7" })         -- Iris
+        api.nvim_set_hl(0, "RP_Base", { fg = "#191724" })         -- Base
+        api.nvim_set_hl(0, "RP_Overlay", { fg = "#26233a" })      -- Overlay
+        api.nvim_set_hl(0, "RP_HighlightLow", { fg = "#21202e" }) -- Highlight Low
+        api.nvim_set_hl(0, "RP_HighlightMed", { fg = "#403d52" }) -- Highlight Med
+        api.nvim_set_hl(0, "RP_Muted", { fg = "#6e6a86" })        -- Muted
+        api.nvim_set_hl(0, "RP_Subtle", { fg = "#908caa" })       -- Subtle
+        api.nvim_set_hl(0, "RP_Iris", { fg = "#c4a7e7" })         -- Iris
       end)
 
       require("ibl").setup({

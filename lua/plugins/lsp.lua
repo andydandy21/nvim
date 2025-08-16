@@ -11,26 +11,6 @@ return {
         function(server)
           require("lspconfig")[server].setup({})
         end,
-        -- Custom denols handler
-        ["denols"] = function()
-          local lspconfig = require("lspconfig")
-          lspconfig.denols.setup({
-            root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-          })
-        end,
-        -- Custom ts_ls handler
-        ["ts_ls"] = function()
-          local lspconfig = require("lspconfig")
-          local util = lspconfig.util
-          lspconfig.ts_ls.setup({
-            root_dir = function(fname)
-              if util.root_pattern("deno.json", "deno.jsonc")(fname) then
-                return nil
-              end
-              return util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")(fname)
-            end,
-          })
-        end,
       },
     },
   },

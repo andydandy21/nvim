@@ -4,8 +4,7 @@ vim.api.nvim_create_user_command("ReloadConfig", function()
     "config.options",
     "config.keymaps",
     "config.commands",
-    "config.filetypes", -- if you have it
-    -- add others you own, e.g. "config.autocmds"
+    "config.filetypes",
   }
 
   -- unload

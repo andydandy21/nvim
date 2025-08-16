@@ -29,6 +29,7 @@ return {
     },
     config = function()
       local cmp = require("cmp")
+      local compare = cmp.config.compare
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -48,12 +49,12 @@ return {
         sorting = {
           priority_weight = 2,
           comparators = {
-            cmp.config.compare.score, -- keep LSP scoring
-            cmp.config.compare.recently_used,
-            cmp.config.compare.locality,
-            cmp.config.compare.kind,
-            cmp.config.compare.length,
-            cmp.config.compare.order,
+            compare.score,
+            compare.recently_used,
+            compare.locality,
+            compare.kind,
+            compare.length,
+            compare.order,
           },
         },
       })

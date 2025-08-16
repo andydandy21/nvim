@@ -14,7 +14,6 @@ return {
           use_focus = true,
         },
         current_line_blame_formatter = "<author>, <author_time:%R> • <summary>",
-        -- rest of your gitsigns config (signs, on_attach, etc.)
       })
     end,
   },

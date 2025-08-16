@@ -1,26 +1,30 @@
-vim.opt.termguicolors = true
 vim.cmd([[highlight Normal guibg=NONE]])
 vim.cmd([[highlight NormalFloat guibg=NONE]])
 
-vim.opt.clipboard = 'unnamedplus' -- Share clipboard with OS
-vim.opt.number = true             -- Enable line numbering
-vim.opt.relativenumber = true     -- Relative numbers for easier navigation
+local opt = vim.opt
 
-vim.opt.smartindent = true
-vim.opt.wrap = false
-vim.opt.incsearch = true
+opt.termguicolors = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
+opt.clipboard = 'unnamedplus'
+opt.number = true
+opt.relativenumber = true
 
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+opt.smartindent = true
+opt.wrap = false
+opt.incsearch = true
 
-vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
 
-vim.opt.splitright = true -- vertical splits open on the *right*
-vim.opt.splitbelow = true -- horizontal splits open on the *bottom*
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
+
+opt.updatetime = 50
+opt.colorcolumn = "80"
+opt.cursorline = true
+
+opt.splitright = true
+opt.splitbelow = true

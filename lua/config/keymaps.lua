@@ -5,18 +5,16 @@ local keymap = vim.keymap
 keymap.set("n", "Q", "<nop>", { silent = true })
 
 -- Create a line below on shift enter
+-- TODO: below doesn't work with windows. Move to <C-CR> ?
 keymap.set("i", "<S-CR>", "<Esc>O", { noremap = true })
 
 -- Move selected text up/down in visual mode
-keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected block down" })
-keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected block up" })
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Buffer navigation
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
-keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Close buffer" })
 
 
 -- PLUGINS
@@ -36,6 +34,7 @@ keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recent fi
 
 -- LSP-related shortcuts
 keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover documentation" })
+-- TODO: remove 1 below?
 keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
 keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "LSP: Go to implementation" })
