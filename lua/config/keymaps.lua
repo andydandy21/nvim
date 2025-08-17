@@ -34,11 +34,10 @@ keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recent fi
 
 -- LSP-related shortcuts
 keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover documentation" })
--- TODO: remove 1 below?
 keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
 keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "LSP: Go to implementation" })
-keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code action" })
+keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { desc = "LSP: Code action" })
 keymap.set("n", "<leader>gh", vim.diagnostic.open_float, { desc = "Show diagnostics" })
 keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
