@@ -4,10 +4,6 @@ local keymap = vim.keymap
 
 keymap.set("n", "Q", "<nop>", { silent = true })
 
--- Create a line below on shift enter
--- TODO: below doesn't work with windows. Move to <C-CR> ?
-keymap.set("i", "<S-CR>", "<Esc>O", { noremap = true })
-
 -- Move selected text up/down in visual mode
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
