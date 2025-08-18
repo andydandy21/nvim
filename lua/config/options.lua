@@ -28,3 +28,4 @@ opt.cursorline = true
 
 opt.splitright = true
 opt.splitbelow = true
+opt.diffopt:append("vertical")
