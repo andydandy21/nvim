@@ -4,13 +4,16 @@ local keymap = vim.keymap
 
 keymap.set("n", "Q", "<nop>", { silent = true })
 
--- Move selected text up/down in visual mode
+-- Indenting
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Buffer navigation
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 keymap.set("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
+
+-- LSP-related shortcuts
+keymap.set({ "n", "v" }, "<leader>l", vim.lsp.buf.format, { desc = "Format file/selection" })
 
 
 -- PLUGINS
@@ -28,16 +31,6 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "List buffe
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
 keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", { desc = "Recent files" })
 
--- LSP-related shortcuts
-keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover documentation" })
-keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename symbol" })
-keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP: Go to definition" })
-keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "LSP: Go to implementation" })
-keymap.set("n", "<leader>.", vim.lsp.buf.code_action, { desc = "LSP: Code action" })
-keymap.set("n", "<leader>gh", vim.diagnostic.open_float, { desc = "Show diagnostics" })
-keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
-keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-keymap.set({ "n", "v" }, "<leader>l", vim.lsp.buf.format, { desc = "Format file/selection" })
 
 -- Neotest — test framework shortcuts
 keymap.set("n", "<leader>tn", function()
