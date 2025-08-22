@@ -1,1 +1,8 @@
-.aider*
+*.swp
+*.swo
+*.swx
+Session.vim
+tags
+.lsp/
+.state/
+.undo/

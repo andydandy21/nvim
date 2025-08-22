@@ -1,7 +1,0 @@
-require("config.options")
-require("config.keymaps")
-require("config.filetypes")
-require("config.lazy")
-require("config.commands")
-require("config.autocms")
-require("config.signs")
