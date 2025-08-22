@@ -1,23 +1,23 @@
 return {
   -- Copilot core
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    opts = {
-      suggestion = { enabled = false }, -- disable ghost text
-      panel = { enabled = false },
-    },
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   opts = {
+  --     suggestion = { enabled = false }, -- disable ghost text
+  --     panel = { enabled = false },
+  --   },
+  -- },
 
   -- Copilot source for nvim-cmp
-  {
-    "zbirenbaum/copilot-cmp",
-    dependencies = { "zbirenbaum/copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   dependencies = { "zbirenbaum/copilot.lua" },
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end,
+  -- },
 
   -- nvim-cmp
   {
@@ -25,7 +25,7 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       "L3MON4D3/LuaSnip",
-      "zbirenbaum/copilot-cmp",
+      -- "zbirenbaum/copilot-cmp",
     },
     config = function()
       local cmp = require("cmp")
@@ -42,7 +42,7 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
-          { name = "copilot", group_index = 1, priority = 1000 },
+          -- { name = "copilot", group_index = 1, priority = 1000 },
           { name = "nvim_lsp" },
           { name = "luasnip" },
         }),

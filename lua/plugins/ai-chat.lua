@@ -6,7 +6,7 @@ return {
     },
     cmd = { "CodeCompanion", "CodeCompanionChat" },
     keys = {
-      { "<leader>ca", "<cmd>CodeCompanion<cr>",            desc = "CodeCompanion (Visual Prompt)" },
+      -- { "<leader>ca", "<cmd>CodeCompanion<cr>",            desc = "CodeCompanion (Visual Prompt)" },
       { "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", desc = "AI Chat (CodeCompanion)" },
       { "<leader>cn", "<cmd>CodeCompanionChat<cr>",        desc = "Open new chat window" }
     },
