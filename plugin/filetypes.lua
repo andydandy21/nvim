@@ -1,3 +1,4 @@
+-- setting options for files based on FileType
 local function set_indent(size)
 	vim.opt_local.tabstop = size
 	vim.opt_local.softtabstop = size

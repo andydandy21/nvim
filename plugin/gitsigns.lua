@@ -28,6 +28,5 @@ require("gitsigns").setup({
 		map("n", "<leader>hD", function()
 			gs.diffthis("~")
 		end, "Diff This Buffer From Prev Commit")
-		map({ "o", "x" }, "<leader>ih", ":<C-U>Gitsigns select_hunk<CR>", "Select Hunk")
 	end,
 })

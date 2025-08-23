@@ -32,6 +32,15 @@ require("mason-nvim-dap").setup({
 	},
 })
 
+local map = vim.keymap.set
+map("n", "<F5>", dap.continue, { desc = "DAP Continue" })
+map("n", "<F10>", dap.step_over, { desc = "DAP Step Over" })
+map("n", "<F11>", dap.step_into, { desc = "DAP Step Into" })
+map("n", "<F12>", dap.step_out, { desc = "DAP Step Out" })
+map("n", "<leader>db", dap.toggle_breakpoint, { desc = "DAP Toggle Breakpoint" })
+map("n", "<leader>dt", dap.terminate, {})
+map("n", "<leader>du", dapui.toggle, { desc = "DAP UI" })
+
 dap.configurations.typescript = dap.configurations.typescript or {}
 dap.configurations.javascript = dap.configurations.javascript or {}
 dap.configurations.typescriptreact = dap.configurations.typescriptreact or {}

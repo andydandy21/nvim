@@ -1,5 +1,17 @@
 ## Requirements
 
+### rust (nightly)
+
+Used with `blink.cmp` plugin for faster code completion
+
+### git (2.4x+)
+
+### nvim (nightly)
+
+`brew install neovim --HEAD`
+
+> If brew is already installed, use: `brew reinstall neovim --HEAD`
+
 ### patched font
 
 Patched font for icons used in editor and explorer.
@@ -29,7 +41,3 @@ curl --remote-name-all https://raw.githubusercontent.com/rose-pine/tm-theme/main
 bat cache --build
 echo '--theme="rose-pine"' >> "$(bat --config-file)"
 ```
-
-### rust (nightly)
-
-Used with `blink.cmp` plugin for faster code completion

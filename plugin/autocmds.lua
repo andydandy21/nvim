@@ -22,7 +22,7 @@ ac("VimEnter", {
 })
 
 -- Open nvim-tree on startup when no session was restored
-vim.api.nvim_create_autocmd("VimEnter", {
+ac("VimEnter", {
 	callback = function()
 		if vim.g.__restored_session then
 			return
