@@ -34,4 +34,6 @@ vim.lsp.enable({
   "ts_ls",
   "rust-analyzer",
   "bashls",
+  "yamlls",      
+  "helm_ls",    
 })
