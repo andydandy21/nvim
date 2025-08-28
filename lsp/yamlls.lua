@@ -11,6 +11,7 @@ return {
 				["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
 				["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
 				["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+				["https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/api/kustomization/v1beta1/kustomization.json"] = "kustomization.{yml,yaml}",
 			},
 		},
 	},
