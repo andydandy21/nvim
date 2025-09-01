@@ -22,5 +22,10 @@ map("n", "<leader>ff", "<cmd>FzfLua files<cr>", { desc = "Find files (fzf-lua)" 
 map("n", "<leader>fg", "<cmd>FzfLua live_grep<cr>", { desc = "Live grep (fzf-lua)" })
 map("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", { desc = "Buffers (fzf-lua)" })
 map("n", "<leader>fh", "<cmd>FzfLua help_tags<cr>", { desc = "Help tags (fzf-lua)" })
+map("n", "<leader>fm", function()
+	require("fzf-lua").marks({
+		marks = "[A-Z]",
+	})
+end, { desc = "Global marks (fzf-lua)" })
 
 fzf.register_ui_select()
