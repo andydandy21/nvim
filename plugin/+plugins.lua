@@ -10,13 +10,13 @@ vim.pack.add({
 	-- Core tooling
 	{ src = "https://github.com/mason-org/mason.nvim" },
 
-  -- Notifications
+	-- Notifications
 	{ src = "https://github.com/j-hui/fidget.nvim" },
 
-  -- Code completion
+	-- Code completion
 	{ src = "https://github.com/Saghen/blink.cmp" },
 
-  -- Sessions
+	-- Sessions
 	{ src = "https://github.com/rmagatti/auto-session" },
 
 	-- Fuzzy finder
@@ -31,17 +31,17 @@ vim.pack.add({
 }, { load = true })
 
 require("rose-pine").setup({})
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("rose-pine-moon")
 
 require("mason").setup({})
 require("lualine").setup({
 	options = { theme = "auto", globalstatus = true, section_separators = "", component_separators = "" },
-  sections = {
-    lualine_c = {
-      {
-        'filename',
-        path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
-      }
-    }
-  }
+	sections = {
+		lualine_c = {
+			{
+				"filename",
+				path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
+			},
+		},
+	},
 })
