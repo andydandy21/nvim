@@ -31,7 +31,7 @@ vim.pack.add({
 }, { load = true })
 
 require("rose-pine").setup({})
-vim.cmd.colorscheme("rose-pine-moon")
+vim.cmd.colorscheme("rose-pine")
 
 require("mason").setup({})
 require("lualine").setup({
