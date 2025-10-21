@@ -42,8 +42,13 @@ ac("VimEnter", {
 
 -- Close the quickfix menu when an option is selected
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "qf",
-  callback = function()
-    vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
-  end,
+	pattern = "qf",
+	callback = function()
+		vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>", { buffer = true, silent = true })
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = "Podfile",
+	command = "set filetype=ruby",
 })

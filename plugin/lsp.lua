@@ -36,4 +36,6 @@ vim.lsp.enable({
 	"bashls",
 	"yamlls",
 	"helm_ls",
+	"ruby-lsp",
+	"sourcekit",
 })

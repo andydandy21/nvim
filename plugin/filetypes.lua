@@ -19,3 +19,13 @@ vim.api.nvim_create_autocmd("FileType", {
 		set_indent(2)
 	end,
 })
+
+vim.filetype.add({
+	filename = {
+		["Podfile"] = "ruby",
+		["Podfile.lock"] = "ruby",
+	},
+	pattern = {
+		[".*%.podspec"] = "ruby",
+	},
+})
