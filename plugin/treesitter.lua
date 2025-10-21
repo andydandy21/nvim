@@ -13,6 +13,7 @@ require("nvim-treesitter.configs").setup({
 		"markdown",
 		"markdown_inline",
 		"yaml",
+		"ruby",
 	},
 	highlight = { enable = true },
 	indent = { enable = true },
@@ -26,3 +27,11 @@ require("nvim-treesitter.configs").setup({
 		},
 	},
 })
+
+vim.filetype.add({
+	pattern = {
+		["Podfile"] = "podfile",
+	},
+})
+
+vim.treesitter.language.register("ruby", { "podfile" })
