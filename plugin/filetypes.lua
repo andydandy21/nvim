@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua" },
+	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "sh", "bash" },
 	callback = function()
 		set_indent(2)
 	end,
