@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
 	},
 	highlight = { enable = true },
 	indent = { enable = true },
+	folds = { enable = true },
 	incremental_selection = {
 		enable = true,
 		keymaps = {
@@ -28,10 +29,10 @@ require("nvim-treesitter.configs").setup({
 	},
 })
 
-vim.filetype.add({
-	pattern = {
-		["Podfile"] = "podfile",
-	},
-})
-
-vim.treesitter.language.register("ruby", { "podfile" })
+-- Treesitter folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldtext = ""
+vim.opt.foldlevelstart = 1
