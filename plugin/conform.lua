@@ -17,7 +17,6 @@ conform.setup({
 		lsp_format = "never",
 	},
 	formatters_by_ft = {
-		ruby = { "rubocop" },
 		lua = { "stylua" },
 		javascript = { "biome", "prettierd", "prettier" },
 		javascriptreact = { "biome", "prettierd", "prettier" },
