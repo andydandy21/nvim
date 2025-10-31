@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("n", "gr", lsp.references, b)
 		map("n", "K", lsp.hover, b)
 		map("n", "<leader>rn", lsp.rename, b)
-		map({ "n", "v" }, "<leader>ca", lsp.code_action, b)
+		map({ "n", "v" }, "<leader>.", lsp.code_action, b)
 
 		-- diagnostics
 		map("n", "<C-w>d", vim.diagnostic.open_float, b)

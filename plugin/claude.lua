@@ -1,0 +1,59 @@
+-- local function floating_terminal(cmd)
+-- 	local buf = vim.api.nvim_create_buf(false, true)
+-- 	local width = math.floor(vim.o.columns * 0.85)
+-- 	local height = math.floor(vim.o.lines * 0.85)
+-- 	local row = math.floor((vim.o.lines - height) / 2) - 1
+-- 	local col = math.floor((vim.o.columns - width) / 2)
+--
+-- 	local win = vim.api.nvim_open_win(buf, true, {
+-- 		relative = "editor",
+-- 		width = width,
+-- 		height = height,
+-- 		row = row,
+-- 		col = col,
+-- 		style = "minimal",
+-- 		border = "rounded",
+-- 	})
+--
+-- 	vim.fn.termopen(cmd or vim.o.shell, {
+-- 		on_exit = function()
+-- 			vim.api.nvim_win_close(win, true)
+-- 		end,
+-- 	})
+--
+-- 	vim.cmd("startinsert")
+-- end
+--
+-- -- Open claude code in chat flow (new session)
+-- vim.keymap.set("n", "<leader>cC", function()
+-- 	local current_file = vim.fn.expand("%:p")
+-- 	local prompt = string.format(
+-- 		'claude "You are to open in a chat only mode. Do not attempt to edit any files unless specifically asked. Do not attempt to run any shell commands unless specifically asked. You do have read access to files. Just act like a helpful assistant and help perform research. Always look up the information to ensure that what you provide is accurate and up to date. The current file I am working on is: %s"',
+-- 		current_file
+-- 	)
+-- 	floating_terminal(prompt)
+-- end, { desc = "ClaudeCode chat flow - new session" })
+--
+-- -- Open claude code in agentic flow (new session)
+-- vim.keymap.set("n", "<leader>ca", function()
+-- 	local current_file = vim.fn.expand("%:p")
+-- 	local prompt = string.format(
+-- 		'claude "You are an agent with an only purpose of writing and defining code. You have complete access to work as if you were the developer yourself. Always attempt to use best practices, and do not forget to leave a summary of changes that you made. Always follow a red, green, refactor approach. Locate relevant test files so you know the way tests are written. If there are no test files currently, then ask if I would like you to generate some. The current file I am working on is: %s"',
+-- 		current_file
+-- 	)
+-- 	floating_terminal(prompt)
+-- end, { desc = "ClaudeCode agentic flow - new session" })
+--
+-- -- Open claude code with --continue flag
+-- vim.keymap.set("n", "<leader>cc", function()
+-- 	local current_file = vim.fn.expand("%:p")
+-- 	local prompt = string.format("claude --continue", current_file)
+-- 	floating_terminal(prompt)
+-- end, { desc = "ClaudeCode agentic flow" })
+--
+-- -- Open claude code in history mode
+-- vim.keymap.set("n", "<leader>ch", function()
+-- 	local current_file = vim.fn.expand("%:p")
+-- 	local prompt = string.format("claude --resume", current_file)
+-- 	floating_terminal(prompt)
+-- end, { desc = "ClaudeCode history" })
