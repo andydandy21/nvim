@@ -16,6 +16,7 @@ vim.pack.add({
 	{ src = "https://github.com/Saghen/blink.cmp" }, -- Code completion
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" }, -- Git in buffer
 	{ src = "https://github.com/stevearc/conform.nvim" }, -- Formatting
+	{ src = "https://github.com/tpope/vim-fugitive" }, -- Git cli tool
 }, { load = true })
 
 require("rose-pine").setup({})
