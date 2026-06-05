@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "auto-session": [],
+    "blink.cmp": [],
+    "bufferline.nvim": [],
+    "conform.nvim": [],
+    "fidget.nvim": [],
+    "fzf-lua": [],
+    "gitsigns.nvim": [],
+    "lualine.nvim": [],
+    "nvim-tree.lua": [],
+    "nvim-treesitter": [],
+    "nvim-web-devicons": [],
+    "rose-pine": [],
+    "toggleterm.nvim": {
+      "rev": "9a88eae",
+      "src": "https://github.com/akinsho/toggleterm.nvim"
+    },
+    "vim-floaterm": {
+      "rev": "bb4ba79",
+      "src": "https://github.com/voldikss/vim-floaterm"
+    },
+    "vim-fugitive": []
+  }
+}
