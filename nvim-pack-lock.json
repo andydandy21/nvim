@@ -1,17 +1,57 @@
 {
   "plugins": {
-    "auto-session": [],
-    "blink.cmp": [],
-    "bufferline.nvim": [],
-    "conform.nvim": [],
-    "fidget.nvim": [],
-    "fzf-lua": [],
-    "gitsigns.nvim": [],
-    "lualine.nvim": [],
-    "nvim-tree.lua": [],
-    "nvim-treesitter": [],
-    "nvim-web-devicons": [],
-    "rose-pine": [],
+    "auto-session": {
+      "rev": "6cde3874a9283c2db55627acca5f28e4fa402320",
+      "src": "https://github.com/rmagatti/auto-session"
+    },
+    "blink.cmp": {
+      "rev": "13e7b50e7ba73ce781459da68d346925adfdb530",
+      "src": "https://github.com/Saghen/blink.cmp"
+    },
+    "blink.lib": {
+      "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
+      "src": "https://github.com/saghen/blink.lib"
+    },
+    "bufferline.nvim": {
+      "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
+      "src": "https://github.com/akinsho/bufferline.nvim"
+    },
+    "conform.nvim": {
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "fidget.nvim": {
+      "rev": "82404b196e73a00b1727a91903beef5ddc319d22",
+      "src": "https://github.com/j-hui/fidget.nvim"
+    },
+    "fzf-lua": {
+      "rev": "988416cc782dfe28bff3f0da9b8c943b236cd86a",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "gitsigns.nvim": {
+      "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "nvim-tree.lua": {
+      "rev": "82f58063d67defc620e1ef8be606fc62a7b5dc1e",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-web-devicons": {
+      "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "rose-pine": {
+      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
+      "src": "https://github.com/rose-pine/neovim"
+    },
     "toggleterm.nvim": {
       "rev": "9a88eae",
       "src": "https://github.com/akinsho/toggleterm.nvim"
@@ -20,6 +60,9 @@
       "rev": "bb4ba79",
       "src": "https://github.com/voldikss/vim-floaterm"
     },
-    "vim-fugitive": []
+    "vim-fugitive": {
+      "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
+      "src": "https://github.com/tpope/vim-fugitive"
+    }
   }
 }
