@@ -15,7 +15,7 @@ ac("VimEnter", {
 	callback = function()
 		local ok, ts_install = pcall(require, "nvim-treesitter.install")
 		if ok and not vim.g._ts_updated_once then
-			ts_install.update({ with_sync = true })()
+			ts_install.update({ with_sync = true })
 			vim.g._ts_updated_once = true
 		end
 	end,
