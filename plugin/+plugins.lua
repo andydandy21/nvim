@@ -11,6 +11,9 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" }, -- Fuzzy finder
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, -- Code colors, navigation
 
+	-- LSP support
+	{ src = "https://github.com/b0o/schemastore.nvim" }, -- JSON schema catalog
+
 	-- Quality of life
 	{ src = "https://github.com/j-hui/fidget.nvim" }, -- Notifications
 	{ src = "https://github.com/Saghen/blink.cmp" }, -- Code completion

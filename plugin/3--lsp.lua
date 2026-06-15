@@ -38,4 +38,5 @@ vim.lsp.enable({
 	"helm_ls",
 	"ruby-lsp",
 	"sourcekit",
+	"jsonls",
 })

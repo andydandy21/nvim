@@ -30,5 +30,6 @@ conform.setup({
 		bash = { "shfmt" },
 		rust = { "rustfmt" },
 		python = { "ruff_format", "black" },
+		sql = { "sql_formatter" },
 	},
 })

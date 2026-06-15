@@ -12,6 +12,10 @@
     "nvim-treesitter": [],
     "nvim-web-devicons": [],
     "rose-pine": [],
+    "schemastore.nvim": {
+      "rev": "e1a3623",
+      "src": "https://github.com/b0o/schemastore.nvim"
+    },
     "toggleterm.nvim": {
       "rev": "9a88eae",
       "src": "https://github.com/akinsho/toggleterm.nvim"
