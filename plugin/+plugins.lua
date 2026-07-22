@@ -24,7 +24,7 @@ vim.pack.add({
 }, { load = true })
 
 require("rose-pine").setup({})
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("rose-pine-moon")
 
 require("lualine").setup({
 	options = { theme = "auto", globalstatus = true, section_separators = "", component_separators = "" },
