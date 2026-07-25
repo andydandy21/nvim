@@ -1,4 +1,6 @@
-vim.pack.add({
+local lazygit = require("config.lazygit")
+
+local specs = {
 	-- UI
 	{ src = "https://github.com/rose-pine/neovim", name = "rose-pine" }, -- Theme
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- Icons
@@ -7,7 +9,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" }, -- Explorer replacement
 
 	-- Core tooling
-	{ src = "https://github.com/rmagatti/auto-session" }, -- Sessions
+	-- { src = "https://github.com/rmagatti/auto-session" }, -- Sessions
 	{ src = "https://github.com/ibhagwan/fzf-lua" }, -- Fuzzy finder
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, -- Code colors, navigation
 
@@ -21,7 +23,10 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/conform.nvim" }, -- Formatting
 	{ src = "https://github.com/tpope/vim-fugitive" }, -- Git cli tool
 	{ src = "https://github.com/voldikss/vim-floaterm" }, -- Terminal
-}, { load = true })
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" }, -- Markdown
+}
+
+vim.pack.add(lazygit.filter(specs), { load = true })
 
 require("rose-pine").setup({})
 vim.cmd.colorscheme("rose-pine-moon")

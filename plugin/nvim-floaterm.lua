@@ -1,3 +1,7 @@
+if require("config.lazygit").is_excluded("vim-floaterm") then
+	return
+end
+
 local width = math.floor(vim.o.columns * 0.85)
 local height = math.floor(vim.o.lines * 0.85)
 

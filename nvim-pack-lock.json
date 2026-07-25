@@ -11,6 +11,10 @@
     "nvim-tree.lua": [],
     "nvim-treesitter": [],
     "nvim-web-devicons": [],
+    "render-markdown.nvim": {
+      "rev": "f422cb5",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
+    },
     "rose-pine": [],
     "schemastore.nvim": {
       "rev": "e1a3623",

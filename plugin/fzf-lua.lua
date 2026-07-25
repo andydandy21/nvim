@@ -1,3 +1,7 @@
+if require("config.lazygit").is_excluded("fzf-lua") then
+	return
+end
+
 local fzf = require("fzf-lua")
 
 fzf.setup({

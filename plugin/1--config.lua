@@ -5,7 +5,7 @@ vim.cmd([[highlight NormalFloat guibg=NONE]])
 vim.g.mapleader = " "
 
 -- Auto Session
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+-- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 local opt = vim.opt
 

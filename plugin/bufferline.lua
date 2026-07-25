@@ -1,3 +1,7 @@
+if require("config.lazygit").is_excluded("bufferline.nvim") then
+	return
+end
+
 require("bufferline").setup({
 	options = {
 		separator_style = { "", "" },

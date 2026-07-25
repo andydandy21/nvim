@@ -1,3 +1,7 @@
+if require("config.lazygit").is_excluded("nvim-tree.lua") then
+	return
+end
+
 -- disable netrw and its plugin early
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -32,7 +36,7 @@ require("nvim-tree").setup({
 	disable_netrw = true,
 	hijack_netrw = true,
 	hijack_unnamed_buffer_when_opening = false,
-	-- auto_open conflicts with auto-session, functionality handled by an autocmd
+	-- auto_open handled by a VimEnter autocmd instead (see plugin/autocmds.lua)
 	hijack_directories = { enable = true, auto_open = false },
 
 	sync_root_with_cwd = true,

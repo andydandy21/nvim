@@ -1,8 +1,13 @@
-require("auto-session").setup({
-	close_filetypes_on_save = { "NvimTree" },
-	post_restore_cmds = {
-		function()
-			vim.g.__restored_session = true
-		end,
-	},
-})
+-- -- Skipped in lazygit mode (auto-session is stripped there); see lua/config/lazygit.lua.
+-- if require("config.lazygit").is_excluded("auto-session") then
+-- 	return
+-- end
+--
+-- require("auto-session").setup({
+-- 	close_filetypes_on_save = { "NvimTree" },
+-- 	post_restore_cmds = {
+-- 		function()
+-- 			vim.g.__restored_session = true
+-- 		end,
+-- 	},
+-- })
